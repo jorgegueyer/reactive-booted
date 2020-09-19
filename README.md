@@ -12,6 +12,21 @@ Go to the folder project:
 cd path/to/the/folder/reactive-booted
 ```
 
+Create the artifact to deploy:
+
+```console
+mvn clean package
+
+...output omitted...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.691 s
+...output omitted...
+```
+> NOTE
+>> Execution tests can be ommitted using the following arg: __-DskipTests__
+
 Build the Dockerfile:
 
 ```console
@@ -55,5 +70,5 @@ docker rm reactive-booted
 docker rmi 041fcc62de52 
 ```
 > NOTE
->> The hash of the CONTAINER_ID to remove the image of the container can be obtained with ***docker images*** command. 
+>> The hash of the IMAGE ID to remove the image of the container can be obtained with ***docker images*** command. 
 
